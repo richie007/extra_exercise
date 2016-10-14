@@ -1,11 +1,13 @@
 //bring in the necessary dependencies
 var express = require('express');
+var cors = require ('cors');
 var bodyParser = require('body-parser');
 
 
 // Configure the express web server framework
 var app = express();
 app.use(bodyParser.json());
+app.use(cors());
 
 
 //define the API routes for our application
