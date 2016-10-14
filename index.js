@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 // Configure the express web server framework
 var app = express();
 app.use(bodyParser.json());
+app.set('port', (process.env.Port || 3000));
 
 //define the API routes for our application
 app.get('/', function (req, res) {
@@ -40,6 +41,6 @@ app.post('/messages',  function (req, res) {
 
 
 //Activate the express server
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+app.listen(app.get('port'), function () {
+  console.log('Example app listening on port');
 });
