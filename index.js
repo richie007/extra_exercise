@@ -41,6 +41,6 @@ app.post('/messages',  function (req, res) {
 
 
 //Activate the express server
-app.listen(process.env.Port || 3000, function () {
+app.listen(process.env.PORT || 3000, function () {
   console.log('Example app listening on port');
 });
